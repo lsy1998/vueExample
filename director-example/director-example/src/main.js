@@ -6,8 +6,10 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
-const app = createApp(App)
+import permission from './directives/permission.js'
 
+const app = createApp(App)
+app.directive('permission', permission)
 app.use(createPinia())
 app.use(router)
 
